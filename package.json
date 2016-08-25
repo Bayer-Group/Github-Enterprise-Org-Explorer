@@ -1,0 +1,68 @@
+{
+  "name": "org-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production node ./bin/www",
+    "dev": "cross-env NODE_ENV=development node ./bin/www",
+    "clean": "rimraf public/styles/style.css public/scripts/bundle.js public/scripts/bundle.js.map",
+    "lessc": "cross-env lessc ./public/styles/style.less ./public/styles/style.css",
+    "package": "cross-env NODE_ENV=production npm run lessc && webpack",
+    "test": "mocha test",
+    "test:dev": "mocha --watch test",
+    "test:nyan": "mocha --watch --reporter nyan test"
+  },
+  "description": "UI to help with GHE org exploration",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MonsantoCo/Github-Enterprise-Org-Explorer.git"
+  },
+  "dependencies": {
+    "coffee-script": "~1.10.0",
+    "compression": "~1.6.1",
+    "express": "~4.13.4",
+    "jade": "~1.11.0",
+    "superagent": "~2.2.0",
+    "superagent-as-promised": "~4.0.0",
+    "underscore": "~1.8.3",
+    "underscore.string": "~3.3.4"
+  },
+  "devDependencies": {
+    "bytes": "~2.4.0",
+    "chai": "~3.5.0",
+    "chai-as-promised": "~5.3.0",
+    "cjsx-loader": "~3.0.0",
+    "coffee-loader": "~0.7.2",
+    "coffee-react": "~5.0.0",
+    "cross-env": "~1.0.8",
+    "es6-promise": "~3.2.1",
+    "flexboxgrid": "~6.3.1",
+    "jsdom": "~8.5.0",
+    "json-loader": "~0.5.4",
+    "less": "~2.7.1",
+    "less-middleware": "~2.1.0",
+    "material-ui": "~0.15.4",
+    "mocha": "~2.5.3",
+    "mockery": "~1.7.0",
+    "moment": "~2.13.0",
+    "node-mocks-http": "~1.5.3",
+    "piping": "~0.3.0",
+    "react": "~15.3.1",
+    "react-addons-css-transition-group": "~15.3.1",
+    "react-dom": "~15.3.1",
+    "react-router": "~2.6.1",
+    "react-tap-event-plugin": "~1.0.0",
+    "rimraf": "~2.5.2",
+    "sinon": "~1.17.4",
+    "sinon-as-promised": "~4.0.0",
+    "sinon-chai": "~2.8.0",
+    "superagent-mocker": "~0.4.0",
+    "superagent-promise": "~1.1.0",
+    "webpack": "~1.13.1",
+    "webpack-dev-middleware": "~1.6.1"
+  },
+  "engines": {
+    "node": "~6.1.0"
+  },
+  "license": "BSD-3-Clause"
+}

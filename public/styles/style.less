@@ -1,0 +1,22 @@
+@import (inline) "../../node_modules/flexboxgrid/dist/flexboxgrid.min.css";
+@bodyMargin: 20px;
+
+body{
+  margin: 0 @bodyMargin @bodyMargin @bodyMargin;
+}
+
+.orgs-enter {
+  opacity: 0.01;
+  &.orgs-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+}
+
+.orgs-leave {
+  opacity: 1;
+  &.orgs-leave-active {
+    opacity: 0.01;
+    transition: opacity 100ms ease-in;
+  }
+}
