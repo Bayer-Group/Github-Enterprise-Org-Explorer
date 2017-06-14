@@ -35,3 +35,21 @@ Optional environment variables:
 - Push the final code wherever it needs to be (we use CloudFoundy so for us it's a push to the cloud.  For you it might be zipping up the current folder)
 - Make sure your environment variables are set wherever the code is going to run
 - `npm start` - If you're not running in something that will monitor your application I would suggest a tool like [forever](https://github.com/foreverjs/forever)
+
+# Running with Docker
+
+1. Build with
+  ```sh
+  docker build -t nameX .
+  ```
+2. Create a docker env file with the needed keys
+  ```sh
+  # your_env_file
+  github_url=my.github.com
+  github_user=johndoe
+  github_pac=xyzabc
+  ```
+3. Run with 
+  ```sh
+  docker run -d --rm -p 8080:3099 --env-file your_env_file nameX
+  ```
