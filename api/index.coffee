@@ -6,6 +6,9 @@ titleize = require 'underscore.string/titleize'
 ltrim = require 'underscore.string/ltrim'
 rtrim = require 'underscore.string/ltrim'
 Agent = -> require('superagent-promise')(require('superagent'), Promise)
+dotenv = require 'dotenv'
+
+dotenv.load()
 
 stripGithubUrlIfNeeded = (value) ->
     if not value?.startsWith "https://#{process.env.github_url}"

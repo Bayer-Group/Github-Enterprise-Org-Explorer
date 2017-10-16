@@ -20,6 +20,7 @@
   "dependencies": {
     "coffee-script": "~1.10.0",
     "compression": "~1.6.1",
+    "dotenv": "~4.0.0",
     "express": "~4.13.4",
     "jade": "~1.11.0",
     "superagent": "~2.2.0",

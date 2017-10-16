@@ -35,4 +35,5 @@ benchmarks/graphs
 /public/scripts/bundle.js
 /public/scripts/bundle.js.map
 /public/styles/style.css
-    
+
+.env
